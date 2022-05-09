@@ -11,15 +11,15 @@ class BatResource(Resource):
         return {
             'sts': 'success',
             'msg': 'checking docker deployment',
-            'res': '1+1 = 2'
+            'res': '13+13=26'
         }
 
-class CatResource(Resource):
+class Resource(Resource):
     def get(self):
         return {
             'sts': 'success',
             'msg': 'checking docker deployment',
-            'res': '5+1 = 6'
+            'res': '10+10 = 20'
         }  
 
 
@@ -29,7 +29,7 @@ api.add_resource(
 )
 
 api.add_resource(
-    CatResource, # shape of user resource
+    Resource, # shape of user resource
     '/cat'
 )
 
